@@ -161,6 +161,15 @@
     y+=45;
     
     self.printButton.y = y + 12;
+    
+    if (model.printed) {
+        [self.printButton setTitleColor:CORLOR_7d7d7d forState:UIControlStateNormal];
+        [self.printButton setTitleColor:CORLOR_7d7d7d forState:UIControlStateHighlighted];
+        self.printButton.layer.borderColor = CORLOR_7d7d7d.CGColor;
+        [self.printButton setTitle:@"已打印" forState:UIControlStateNormal];
+        [self.printButton setTitle:@"已打印" forState:UIControlStateHighlighted];
+        
+    }
 }
 
 -(void)printButtonClicked
@@ -169,6 +178,8 @@
         [self.printBtnClickDelegate printBtnClick:_orderModel];
     }
 }
+
+
 
 -(void)setFrame:(CGRect)frame
 {

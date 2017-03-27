@@ -41,6 +41,33 @@
 
     _tableview.rowHeight = 60;
     _tableview.tableFooterView = [UIView new];
+    
+
+    // 打印设置的默认值，可以修改，或者获取此值，对应于打印模版设置的内容
+    NSDictionary *dic = @{
+     @"lineSpace"  :@28,    //0～254 默认28  对应4毫米
+     @"printertype":@0,// 打印机宽度  0 58mm,1 80mm,2 110mm,3,A4 针式打印机蓝牙适配器,3 airprint A4（台式无线打印机）
+     @"printerfontsize":@0,//字体大小 0自动, 1小，2中，3大,
+     @"copycount":@0,//0 1联，1 2联 ，2 3联
+     @"autoprint":@1,//0 不自动打印  1自动打印
+     @"company":NSLocalizedString(@"公司名称", @""),//公司名称 第一行自动居中 大字体，可多行
+     @"operater":NSLocalizedString(@"店小二", @""),//开单员
+     @"welcome":NSLocalizedString(@"谢谢惠顾", @""),//页脚，可多行
+     @"barcode":@"",//二维码的链接地址
+     
+     @"name":@YES,//名称
+     @"code":@NO,//商品条码编号
+     @"styenum":@YES,//款号 货号
+     @"color":@YES,//颜色
+     @"spec":@NO,//规格
+     @"count":@YES,//数量
+     @"unit":@YES,//单位
+     @"price":@YES,//价格
+     @"xiaoji":@YES,//小记
+     @"comment":@YES,//订单备注
+       };
+    [PrinterWraper setPrinterSetting:dic];
+
 
 }
 
@@ -60,15 +87,6 @@
     [PrinterWraper StartScanTimeout:10];
     
     mytimer = [NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(timeout) userInfo:nil repeats:NO];
-    activityView=[[UIActivityIndicatorView alloc]     initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    
-    activityView.center=self.view.center;
-    
-    [activityView startAnimating];
-    
-    [self.view addSubview:activityView];
-    
-    
 }
 
 -(void)timeout{
@@ -120,7 +138,6 @@
     choosedIndex =indexPath.row;
 
     [PrinterWraper connectPrinterTag:0 uid:device.identifier.UUIDString useCache:YES];
-    
 }
 -(void)BlueToothOpen:(BOOL)isopen
 {
@@ -141,6 +158,7 @@
 
 -(void)didConnected:(NSString*)deviceUid Result:(BOOL)success
 {
+    [NSUserDefaults setDeviceUid:deviceUid];
     [_tableview reloadData];
     if (success)
         [self excuteTask];

@@ -62,7 +62,7 @@ static RSToastView *shareObject = nil;
     self.hud.mode = MBProgressHUDModeText;
     self.hud.yOffset = -100;
     [self.hud showAnimated:YES whileExecutingBlock:^{
-        sleep(1);
+        sleep(1.5);
     } completionBlock:^{
         [self.hud removeFromSuperview];
         self.hud = nil;

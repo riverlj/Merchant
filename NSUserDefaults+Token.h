@@ -17,4 +17,12 @@
 +(void) setCommuntityName:(NSString *)communtityName;
 +(NSString *)getCommuntityId;
 +(NSString *)getCommuntityName;
++(void)setPrintedOrders:(NSArray *)array;
++(NSArray *)getPrintedOrders;
++(void)setDeviceUid:(NSString *)deviceUid;
++(NSString *)getDeviceUid;
++(void)clearLastDayPrint;
++(void)setPrintedType:(NSDictionary *)dic;
++(NSMutableDictionary*)getPrintedType;
++(void)clearLastDayPrintedtype;
 @end

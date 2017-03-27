@@ -12,9 +12,10 @@
 #import "PrintUtli.h"
 #import "BCListViewController.h"
 
-@interface OrderInfoViewController ()<UITableViewDelegate, UITableViewDataSource, PrintBtnClickDelegate>
+@interface OrderInfoViewController ()<UITableViewDelegate, UITableViewDataSource, PrintBtnClickDelegate, BluetoothDelegate>
 @property (nonatomic, strong)UITableView *totalTableView;
 @property (nonatomic, strong)AllModelDetail *allModelDetail;
+@property (nonatomic, strong)NSArray *printedArray;
 
 @end
 
@@ -43,8 +44,25 @@
     
     [AllModelDetail getAllOrderDetail:self.ordertype OrderDate:self.date success:^(AllModelDetail *model) {
         selfWeak.allModelDetail = model;
+        
+        [selfWeak setPrintedStatus];
+        
         [selfWeak.totalTableView reloadData];
     }];
+}
+
+-(void)setPrintedStatus
+{
+    NSArray *printedArray = [NSUserDefaults getPrintedOrders];
+    for (int i=0; i<self.allModelDetail.orders.count; i++) {
+        OrderModel *model = self.allModelDetail.orders[i];
+        for (NSString *orderid in printedArray) {
+            if ([orderid isEqualToString:model.orderid]) {
+                model.printed = YES;
+                continue;
+            }
+        }
+    }
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -73,18 +91,65 @@
 
 -(void)printAllOrders:(UIGestureRecognizer *)sender
 {
-    NSLog(@"2222");
+    if (![PrinterWraper isPrinterAvailable:[NSUserDefaults getDeviceUid]]) {
+        [[RSToastView shareRSToastView] showToast:@"打印机未连接"];
+        return;
+    }
+    [[RSToastView shareRSToastView] showHUD:@"打印中..."];
+    BCListViewController *bclist = [[BCListViewController alloc] init];
+    self.printedArray = self.allModelDetail.orders;
+    [PrintUtli print:self.printedArray fromVc:self nav:self.navigationController printListVc:bclist];
 }
 
 -(void)printBtnClick:(OrderModel *)model
 {
+    if (![PrinterWraper isPrinterAvailable:[NSUserDefaults getDeviceUid]]) {
+        [[RSToastView shareRSToastView] showToast:@"打印机未连接"];
+        return;
+    }
     //打印
-    NSArray *array = @[
+    [[RSToastView shareRSToastView] showHUD:@"打印中..."];
+    self.printedArray = @[
                        model
                        ];
     BCListViewController *bclist = [[BCListViewController alloc] init];
-    [PrintUtli print:array fromVc:self nav:self.navigationController printListVc:bclist];
+//    PrintUtli *util = [[PrintUtli alloc] init];
+    [PrintUtli print:self.printedArray fromVc:self nav:self.navigationController printListVc:bclist];
 }
 
+-(void)finishPrint
+{
+    for (int i=0; i<self.allModelDetail.orders.count; i++) {
+        OrderModel *model = self.allModelDetail.orders[i];
+        for (OrderModel *model1 in self.printedArray) {
+            if ([model.orderid isEqualToString:model1.orderid]) {
+                model.printed = YES;
+                continue;
+            }
+        }
+    }
+    
+    [[RSToastView shareRSToastView] hidHUD];
+    [self.totalTableView reloadData];
+    
+     NSArray *array = [NSUserDefaults getPrintedOrders];
+    NSMutableArray *mArray = [[NSMutableArray alloc] init];
+    [mArray addObjectsFromArray:array];
+    for (OrderModel *model in self.printedArray) {
+        NSString *orderid = model.orderid;
+        BOOL flag = false;
+        for (NSString *torderid in array) {
+            if ([torderid isEqualToString:orderid]) {
+                flag = true;
+                break;
+            }
+        }
+        
+        if (!flag) {
+            [mArray addObject:orderid];
+        }
+    }
+    [NSUserDefaults setPrintedOrders:mArray];
+}
 
 @end

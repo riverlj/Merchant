@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PrintUtli : NSObject
-+ (void)print:(NSArray *)models fromVc:(UIViewController *)vc nav:(UINavigationController *)nav printListVc:(UIViewController *)pvc;
++ (void)print:(NSArray *)models fromVc:(id)vc nav:(UINavigationController *)nav printListVc:(UIViewController *)pvc;
 @end

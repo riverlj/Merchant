@@ -9,4 +9,5 @@ pod 'MJRefresh', '~> 3.0.8'
 pod 'FCUUID'
 pod 'SDWebImage', '~>3.8'
 pod 'MMDrawerController', '~> 0.5.7'
+pod 'JSPatchPlatform'
 end

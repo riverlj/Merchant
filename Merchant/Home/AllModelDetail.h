@@ -17,6 +17,12 @@
 @property (nonatomic ,copy)NSString *address;
 @property (nonatomic ,copy)NSArray *dashes;
 @property (nonatomic ,strong)NSNumber *seq;
+@property (nonatomic ,assign)BOOL printed;
+
+@property (nonatomic,copy) NSString *saleprice;
+@property (nonatomic,copy) NSString *payed;
+@property (nonatomic,copy) NSString *bonus;
+
 
 @end
 

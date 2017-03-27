@@ -16,12 +16,15 @@
 #import "SVProgressHUD.h"
 #import "PrinterSDK.h"
 #import "BCListViewController.h"
+#import "AllModelDetail.h"
+#import "PrintUtli.h"
 
 
 
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource,BluetoothDelegate>
 {
     NSInteger count;
+    NSDictionary *dic;
 }
 @property (strong, nonatomic) UITableView *homeTableView;
 @property (nonatomic, copy)NSMutableArray *dataSource;
@@ -34,7 +37,7 @@
     [super viewDidLoad];
     self.title = @"首页";
     
-    NSDictionary *dic  = @{
+    __block NSDictionary *dictype  = @{
                            @"1": @{@"imageName":@"icon_breakfast",@"typeName":@"早餐订单", @"typeid":@"1"},
                            @"2": @{@"imageName":@"icon_lunch",@"typeName":@"午餐订单", @"typeid":@"2"},
                            @"3":@{@"imageName":@"icon_dinner",@"typeName":@"晚餐订单", @"typeid":@"3"}
@@ -62,7 +65,7 @@
         NSArray *bizlistArray = delegate.userInfoModel.bizlist;
         for (int i=0; i<bizlistArray.count; i++) {
             NSString *biz = [bizlistArray[i] stringValue];
-            NSDictionary *tempdic = [dic valueForKey:biz];
+            NSDictionary *tempdic = [dictype valueForKey:biz];
             [selfWeak.dataSource addObject:tempdic];
             [selfWeak.homeTableView reloadData];
         }
@@ -71,7 +74,18 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+}
 
+-(void)printAllList
+{
+    [SVProgressHUD showSuccessWithStatus:@"自动打印完成"];
+}
+
+-(NSDate *)dateFromString:(NSString *)dateString{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"yyyy-MM-dd HH:mm:ss"];
+    NSDate *destDate= [dateFormatter dateFromString:dateString];
+    return destDate;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -80,9 +94,9 @@
         homeTableCell = [[HomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"HomeViewController"];
     }
     
-    NSDictionary *dic = self.dataSource[indexPath.row];
-    homeTableCell.foodtypeImageView.image = [UIImage imageNamed:[dic valueForKey:@"imageName"]];
-    homeTableCell.foodNameLabel.text = [dic valueForKey:@"typeName"];
+    NSDictionary *dic1 = self.dataSource[indexPath.row];
+    homeTableCell.foodtypeImageView.image = [UIImage imageNamed:[dic1 valueForKey:@"imageName"] ];
+    homeTableCell.foodNameLabel.text = [dic1 valueForKey:@"typeName"];
     
     return homeTableCell;
 }
@@ -97,10 +111,10 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSDictionary *dic = self.dataSource[indexPath.row];
+    NSDictionary *dic1 = self.dataSource[indexPath.row];
     OrderViewController *order = [[OrderViewController alloc] init];
-    order.ordertype = [dic valueForKey:@"typeid"];
-    order.title = [dic valueForKey:@"typeName"];
+    order.ordertype = [dic1 valueForKey:@"typeid"];
+    order.title = [dic1 valueForKey:@"typeName"];
     [self.navigationController pushViewController:order animated:YES];
 }
 

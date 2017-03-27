@@ -34,7 +34,7 @@
 #define UTM_SOURCE @"testDev"
 #else
 //正式
-#define  REDSCARF_BASE_URL @"http://waimai.honglingjinclub.com"
+#define  REDSCARF_BASE_URL @"http://e.honglingjinclub.com"
 #define  REDSCARF_PAY_URL @""
 #define  REDSCARF_MOBILE_URL @"http://waimai.honglingjinclub.com"
 #define APP_REGISTER_URL @"http://waimai.honglingjinclub.com/web/register.html"

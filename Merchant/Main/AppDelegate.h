@@ -15,7 +15,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic ,strong)BaseNavigationController *currentNav;
 @property (nonatomic ,strong)UserInfoModel *userInfoModel;
-
+@property (nonatomic,assign) BOOL canprint;
 
 
 

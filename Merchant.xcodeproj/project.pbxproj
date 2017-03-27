@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5762A8B61DFCEAC800FE0238 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5762A8B31DFCEAC800FE0238 /* SVProgressHUD.bundle */; };
+		5762A8B71DFCEAC800FE0238 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5762A8B51DFCEAC800FE0238 /* SVProgressHUD.m */; };
+		5762A8B91DFD2A9700FE0238 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5762A8B81DFD2A9700FE0238 /* Default-568h@2x.png */; };
+		5762A8BB1DFD2BAC00FE0238 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5762A8BA1DFD2BAC00FE0238 /* Launch Screen.storyboard */; };
 		B10E4F2C1DED2DC700912718 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10E4F2B1DED2DC700912718 /* BaseViewController.m */; };
 		B10E4F2F1DED2DEA00912718 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10E4F2E1DED2DEA00912718 /* BaseNavigationController.m */; };
 		B10E4F371DED2E5400912718 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10E4F361DED2E5400912718 /* HomeViewController.m */; };
@@ -46,11 +50,6 @@
 		B1E871A41DF8EB80000DA4B1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E871A31DF8EB80000DA4B1 /* CoreBluetooth.framework */; };
 		B1E871A91DF8ECC8000DA4B1 /* BCListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E871A71DF8ECC8000DA4B1 /* BCListViewController.m */; };
 		B1E871AA1DF8ECC8000DA4B1 /* BCListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1E871A81DF8ECC8000DA4B1 /* BCListViewController.xib */; };
-		B1E871B61DF8F226000DA4B1 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E871AD1DF8F226000DA4B1 /* SVIndefiniteAnimatedView.m */; };
-		B1E871B71DF8F226000DA4B1 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E871AF1DF8F226000DA4B1 /* SVProgressAnimatedView.m */; };
-		B1E871B81DF8F226000DA4B1 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B1E871B11DF8F226000DA4B1 /* SVProgressHUD.bundle */; };
-		B1E871B91DF8F226000DA4B1 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E871B31DF8F226000DA4B1 /* SVProgressHUD.m */; };
-		B1E871BA1DF8F226000DA4B1 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E871B51DF8F226000DA4B1 /* SVRadialGradientLayer.m */; };
 		B1E871C01DFAFC29000DA4B1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E871BF1DFAFC29000DA4B1 /* AVFoundation.framework */; };
 		B1E871C41DFAFC40000DA4B1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E871C31DFAFC40000DA4B1 /* SystemConfiguration.framework */; };
 		B1E871C61DFAFC4B000DA4B1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E871C51DFAFC4B000DA4B1 /* libz.tbd */; };
@@ -78,6 +77,12 @@
 
 /* Begin PBXFileReference section */
 		523B24EFB5DA3E69AE766B53 /* libPods-Merchant.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Merchant.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5712632E1DFE259800D2A5C2 /* Merchant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Merchant.entitlements; sourceTree = "<group>"; };
+		5762A8B31DFCEAC800FE0238 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		5762A8B41DFCEAC800FE0238 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		5762A8B51DFCEAC800FE0238 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		5762A8B81DFD2A9700FE0238 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5762A8BA1DFD2BAC00FE0238 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B10E4F2A1DED2DC700912718 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		B10E4F2B1DED2DC700912718 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		B10E4F2D1DED2DEA00912718 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
@@ -160,16 +165,6 @@
 		B1E871A61DF8ECC8000DA4B1 /* BCListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCListViewController.h; sourceTree = "<group>"; };
 		B1E871A71DF8ECC8000DA4B1 /* BCListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCListViewController.m; sourceTree = "<group>"; };
 		B1E871A81DF8ECC8000DA4B1 /* BCListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCListViewController.xib; sourceTree = "<group>"; };
-		B1E871AC1DF8F226000DA4B1 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		B1E871AD1DF8F226000DA4B1 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		B1E871AE1DF8F226000DA4B1 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		B1E871AF1DF8F226000DA4B1 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		B1E871B01DF8F226000DA4B1 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		B1E871B11DF8F226000DA4B1 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		B1E871B21DF8F226000DA4B1 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		B1E871B31DF8F226000DA4B1 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		B1E871B41DF8F226000DA4B1 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		B1E871B51DF8F226000DA4B1 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 		B1E871BF1DFAFC29000DA4B1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B1E871C11DFAFC35000DA4B1 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B1E871C31DFAFC40000DA4B1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -227,6 +222,16 @@
 				523B24EFB5DA3E69AE766B53 /* libPods-Merchant.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5762A8B21DFCEAC800FE0238 /* SVProgressHD */ = {
+			isa = PBXGroup;
+			children = (
+				5762A8B31DFCEAC800FE0238 /* SVProgressHUD.bundle */,
+				5762A8B41DFCEAC800FE0238 /* SVProgressHUD.h */,
+				5762A8B51DFCEAC800FE0238 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHD;
 			sourceTree = "<group>";
 		};
 		8B71CFF3B77EFB477D5E68E0 /* Pods */ = {
@@ -478,6 +483,8 @@
 		B199EDD21DED1A2F0079D25F /* Merchant */ = {
 			isa = PBXGroup;
 			children = (
+				5712632E1DFE259800D2A5C2 /* Merchant.entitlements */,
+				5762A8B81DFD2A9700FE0238 /* Default-568h@2x.png */,
 				B1E871A51DF8ECA1000DA4B1 /* BlueCoreList */,
 				B12DF7E11DF240F7006B67A0 /* Personal */,
 				B12DF7DA1DF1BB63006B67A0 /* Login */,
@@ -485,6 +492,7 @@
 				B10E4F291DED2DA100912718 /* Base */,
 				B10E4F281DED2D8300912718 /* Home */,
 				B10E4F271DED2C8A00912718 /* Main */,
+				5762A8BA1DFD2BAC00FE0238 /* Launch Screen.storyboard */,
 			);
 			path = Merchant;
 			sourceTree = "<group>";
@@ -510,9 +518,9 @@
 		B1E871931DF8EB41000DA4B1 /* ThreeLib */ = {
 			isa = PBXGroup;
 			children = (
+				5762A8B21DFCEAC800FE0238 /* SVProgressHD */,
 				B175A2C11DFB9F1800A5E40F /* include */,
 				B175A2C41DFB9F1800A5E40F /* libPrinterSDK.a */,
-				B1E871AB1DF8F226000DA4B1 /* SVProgressHUD */,
 			);
 			name = ThreeLib;
 			sourceTree = "<group>";
@@ -526,23 +534,6 @@
 				B1E871A81DF8ECC8000DA4B1 /* BCListViewController.xib */,
 			);
 			name = BlueCoreList;
-			sourceTree = "<group>";
-		};
-		B1E871AB1DF8F226000DA4B1 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				B1E871AC1DF8F226000DA4B1 /* SVIndefiniteAnimatedView.h */,
-				B1E871AD1DF8F226000DA4B1 /* SVIndefiniteAnimatedView.m */,
-				B1E871AE1DF8F226000DA4B1 /* SVProgressAnimatedView.h */,
-				B1E871AF1DF8F226000DA4B1 /* SVProgressAnimatedView.m */,
-				B1E871B01DF8F226000DA4B1 /* SVProgressHUD-Prefix.pch */,
-				B1E871B11DF8F226000DA4B1 /* SVProgressHUD.bundle */,
-				B1E871B21DF8F226000DA4B1 /* SVProgressHUD.h */,
-				B1E871B31DF8F226000DA4B1 /* SVProgressHUD.m */,
-				B1E871B41DF8F226000DA4B1 /* SVRadialGradientLayer.h */,
-				B1E871B51DF8F226000DA4B1 /* SVRadialGradientLayer.m */,
-			);
-			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -615,8 +606,13 @@
 				TargetAttributes = {
 					B199EDCF1DED1A2F0079D25F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 78WD89EN9R;
+						DevelopmentTeam = HVW9LQ2544;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					B199EDE81DED1A300079D25F = {
 						CreatedOnToolsVersion = 8.0;
@@ -655,11 +651,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1E871B81DF8F226000DA4B1 /* SVProgressHUD.bundle in Resources */,
+				5762A8B61DFCEAC800FE0238 /* SVProgressHUD.bundle in Resources */,
 				B12DF7DF1DF1BB9B006B67A0 /* LoginViewController.xib in Resources */,
 				B1E871AA1DF8ECC8000DA4B1 /* BCListViewController.xib in Resources */,
 				B17CF1321DF3E01100E07848 /* Assets.xcassets in Resources */,
 				B12DF7E61DF24127006B67A0 /* PersonalViewController.xib in Resources */,
+				5762A8B91DFD2A9700FE0238 /* Default-568h@2x.png in Resources */,
+				5762A8BB1DFD2BAC00FE0238 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +720,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -737,13 +735,12 @@
 				B199EDD81DED1A2F0079D25F /* AppDelegate.m in Sources */,
 				B17CF0D91DF2B48600E07848 /* HistoryTableViewCell.m in Sources */,
 				B10E4F2C1DED2DC700912718 /* BaseViewController.m in Sources */,
-				B1E871B61DF8F226000DA4B1 /* SVIndefiniteAnimatedView.m in Sources */,
 				B17CF0BF1DF27EB900E07848 /* OrderViewController.m in Sources */,
 				B199EDD51DED1A2F0079D25F /* main.m in Sources */,
 				B17CF0E01DF2CFA400E07848 /* OrderInfoTableViewCell.m in Sources */,
 				B17CF1301DF3AE3400E07848 /* RSToastView.m in Sources */,
+				5762A8B71DFCEAC800FE0238 /* SVProgressHUD.m in Sources */,
 				B17CF0C61DF2917300E07848 /* RSSubTitleView.m in Sources */,
-				B1E871BA1DF8F226000DA4B1 /* SVRadialGradientLayer.m in Sources */,
 				B17CF0D31DF29A0900E07848 /* TotalTableViewCell.m in Sources */,
 				B17CF1391DF63EC800E07848 /* UserInfoModel.m in Sources */,
 				B12DF7DE1DF1BB9B006B67A0 /* LoginViewController.m in Sources */,
@@ -756,9 +753,7 @@
 				B17CF0B61DF2625700E07848 /* HomeTableViewCell.m in Sources */,
 				B188EB811DED325F005688C2 /* BaseTabBarController.m in Sources */,
 				B17CF1271DF3AC7B00E07848 /* NSString+RSHttp.m in Sources */,
-				B1E871B71DF8F226000DA4B1 /* SVProgressAnimatedView.m in Sources */,
 				B12DF7E51DF24127006B67A0 /* PersonalViewController.m in Sources */,
-				B1E871B91DF8F226000DA4B1 /* SVProgressHUD.m in Sources */,
 				B10E4F371DED2E5400912718 /* HomeViewController.m in Sources */,
 				B17CF0DD1DF2CCA400E07848 /* OrderInfoViewController.m in Sources */,
 				B17CF1431DF6507A00E07848 /* AllModelDetail.m in Sources */,
@@ -898,7 +893,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 78WD89EN9R;
+				CODE_SIGN_ENTITLEMENTS = Merchant/Merchant.entitlements;
+				DEVELOPMENT_TEAM = HVW9LQ2544;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PgyUpdate/PgySDK/sdk",
@@ -916,7 +912,7 @@
 					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
 				);
 				INFOPLIST_FILE = Merchant/Main/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -924,6 +920,7 @@
 					"$(PROJECT_DIR)/GprinterSDKforIOS_v1.1.0",
 					"$(PROJECT_DIR)/Merchant",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"AFNetworking\"",
@@ -956,7 +953,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RedScarf.Merchant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RedScarf.RSMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -967,7 +964,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 78WD89EN9R;
+				CODE_SIGN_ENTITLEMENTS = Merchant/Merchant.entitlements;
+				DEVELOPMENT_TEAM = HVW9LQ2544;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PgyUpdate/PgySDK/sdk",
@@ -985,7 +983,7 @@
 					"\"${PODS_ROOT}/Headers/Public/YYModel\"",
 				);
 				INFOPLIST_FILE = Merchant/Main/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -993,6 +991,7 @@
 					"$(PROJECT_DIR)/GprinterSDKforIOS_v1.1.0",
 					"$(PROJECT_DIR)/Merchant",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-l\"AFNetworking\"",
@@ -1025,7 +1024,7 @@
 					"\"UIKit\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.RedScarf.Merchant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RedScarf.RSMerchant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
